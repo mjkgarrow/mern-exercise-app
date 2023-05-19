@@ -1,13 +1,14 @@
 import { Router } from 'express'
 import WorkoutModel from '../models/WorkoutModel.js'
 import ProgramModel from '../models/ProgramModel.js'
+import { requireAuth } from '../middleware/requireAuth.js'
 
 
 
 const router = Router()
 
 // Get all workouts
-router.get('/', (req, res) => {
+router.get('/', requireAuth, (req, res) => {
     WorkoutModel.find({ workoutUser: req.user._id })
         .then(data => res.json(data))
         .catch((err) => {
@@ -17,7 +18,7 @@ router.get('/', (req, res) => {
 })
 
 // Create a workout
-router.post('/create', (req, res) => {
+router.post('/create', requireAuth, (req, res) => {
 
     WorkoutModel.create({
         workoutUser: req.user._id,
@@ -68,7 +69,7 @@ router.post('/create', (req, res) => {
 
 
 // Delete a workout
-router.delete('/delete/:id', (req, res) => {
+router.delete('/delete/:id', requireAuth, (req, res) => {
     WorkoutModel.findOneAndDelete({ _id: req.params.id })
         .then(deletedWorkout => res.json(deletedWorkout))
         .catch((err) => {
