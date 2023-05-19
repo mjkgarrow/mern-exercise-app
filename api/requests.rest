@@ -137,3 +137,12 @@ Content-Type: application/json
     "password": "Abc123$%"
 }
 
+###
+
+POST https://mern-exercise-app-zy3k.onrender.com/api/auth/register
+Content-Type: application/json
+
+{
+    "email": "test@test.com",
+    "password": "Abc123$%"
+}
