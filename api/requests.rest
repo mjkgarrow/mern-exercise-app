@@ -1,0 +1,139 @@
+
+GET http://localhost:3001/api/programs/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDY1ZmFiMDQzMzAxNzZiNzEyY2Q4YWEiLCJpYXQiOjE2ODQ0MTUwMjUsImV4cCI6MTY4NDU4NzgyNX0.J5DBbqpXPWnp2vOteaN5c-GJEAGj_95lJrGAKt6Cg7U
+
+###
+
+POST http://localhost:3001/api/programs/create
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDY1ZmFiMDQzMzAxNzZiNzEyY2Q4YWEiLCJpYXQiOjE2ODQ0MTUwMjUsImV4cCI6MTY4NDU4NzgyNX0.J5DBbqpXPWnp2vOteaN5c-GJEAGj_95lJrGAKt6Cg7U
+Content-Type: application/json
+
+{
+    "programName": "Workout B",
+    "programExercises": [
+        {
+            "exerciseName": "Deadlift",
+            "exerciseWeight": 60,
+            "exerciseProgression": 5,
+            "exerciseReps": 5,
+            "exerciseSets": 3
+        },
+        {
+            "exerciseName": "Pullup",
+            "exerciseWeight": 5,
+            "exerciseProgression": 2.5,
+            "exerciseReps": 10,
+            "exerciseSets": 3
+        }
+    ]
+}
+
+
+###
+
+PUT http://localhost:3001/api/programs/update/645f1dda6c13b47d1929d6c0
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDY1ZmFiMDQzMzAxNzZiNzEyY2Q4YWEiLCJpYXQiOjE2ODQ0MTUwMjUsImV4cCI6MTY4NDU4NzgyNX0.J5DBbqpXPWnp2vOteaN5c-GJEAGj_95lJrGAKt6Cg7U
+Content-Type: application/json
+
+{
+      "programName": "Workout Z"
+}
+
+
+###
+
+DELETE http://localhost:3001/api/programs/delete/645f31091502ca5b31e03b98
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDY1ZmFiMDQzMzAxNzZiNzEyY2Q4YWEiLCJpYXQiOjE2ODQ0MTUwMjUsImV4cCI6MTY4NDU4NzgyNX0.J5DBbqpXPWnp2vOteaN5c-GJEAGj_95lJrGAKt6Cg7U
+###
+
+
+
+GET http://localhost:3001/api/workouts/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDY1ZmFiMDQzMzAxNzZiNzEyY2Q4YWEiLCJpYXQiOjE2ODQ0MTUwMjUsImV4cCI6MTY4NDU4NzgyNX0.J5DBbqpXPWnp2vOteaN5c-GJEAGj_95lJrGAKt6Cg7U
+
+###
+
+POST http://localhost:3001/api/workouts/create
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDY1ZmFiMDQzMzAxNzZiNzEyY2Q4YWEiLCJpYXQiOjE2ODQ0MTUwMjUsImV4cCI6MTY4NDU4NzgyNX0.J5DBbqpXPWnp2vOteaN5c-GJEAGj_95lJrGAKt6Cg7U
+Content-Type: application/json
+
+{
+    "workoutDate":"2023-05-17T01:27:47.003Z",
+    "workoutDuration":1531,
+    "workoutInfo":
+    {
+        "_id":"6462db04a3f9c1349e67bac2",
+        "programName":"Workout A",
+        "programExercises":
+        [
+            {
+                "_id":"6462db04a3f9c1349e67bac3",
+                "exerciseName":"Deadlift",
+                "exerciseProgression":2.5,
+                "exerciseWeight":50,
+                "exerciseReps":5,
+                "exerciseSets":5,
+                "completedRepsSets":
+                [[5,false],[5,false],[5,false],[5,false],[5,false]]
+            },
+            {
+                "_id":"6462db04a3f9c1349e67bac4",
+                "exerciseName":"Bench press",
+                "exerciseProgression":2.5,
+                "exerciseWeight":20,
+                "exerciseReps":5,
+                "exerciseSets":5,
+                "completedRepsSets":[[5,false],[5,false],[5,false],[5,false],[5,false]]
+            },
+            {
+                "_id":"6462db04a3f9c1349e67bac5",
+                "exerciseName":"Barbell row",
+                "exerciseProgression":2.5,
+                "exerciseWeight":20,
+                "exerciseReps":5,
+                "exerciseSets":5,
+                "completedRepsSets":[[5,false],[5,false],[5,false],[5,false],[5,false]]
+            },
+            {
+                "_id":"6462db04a3f9c1349e67bac6",
+                "exerciseName":"Pullups",
+                "exerciseProgression":2.5,
+                "exerciseWeight":0,
+                "exerciseReps":10,
+                "exerciseSets":3,
+                "completedRepsSets":[[10,false],[10,false],[10,false]]
+            }
+        ]
+    }
+}
+
+###
+
+DELETE http://localhost:3001/api/workouts/delete/646622632a379704e49f037a
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDY1ZmFiMDQzMzAxNzZiNzEyY2Q4YWEiLCJpYXQiOjE2ODQ0MTUwMjUsImV4cCI6MTY4NDU4NzgyNX0.J5DBbqpXPWnp2vOteaN5c-GJEAGj_95lJrGAKt6Cg7U
+
+
+###
+
+POST http://localhost:3001/api/auth/login
+
+###
+
+POST http://localhost:3001/api/auth/register
+Content-Type: application/json
+
+{
+    "email": "test@test.com",
+    "password": "Abc123$%"
+}
+
+###
+
+POST http://localhost:3001/api/auth/login
+Content-Type: application/json
+
+{
+    "email": "test@test.com",
+    "password": "Abc123$%"
+}
+

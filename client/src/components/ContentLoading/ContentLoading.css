@@ -1,0 +1,35 @@
+.content-loading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    width: 100vw;
+    height: 50vh;
+    align-content: center;
+}
+
+.content-loading-spinner {
+    border: 6px solid #959595;
+    border-top: 6px solid #47ff9d;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 16px;
+}
+
+.content-loading-message {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

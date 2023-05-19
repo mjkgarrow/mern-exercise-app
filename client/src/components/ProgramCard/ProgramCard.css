@@ -1,0 +1,89 @@
+.program-card {
+    width: 250px;
+    font-weight: 800;
+}
+
+.program-card:hover .program-card-header {
+    background-color: #444;
+}
+
+.program-card-header {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 10px 10px 0px 0px;
+    transition: all .2s ease-in-out;
+}
+
+.program-card-title {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.program-card-delete {
+    position: relative;
+    left: 105px;
+    top: 28px;
+    height: 16px;
+    width: 16px;
+    border-radius: 100%;
+    background-color: rgb(228, 116, 116);
+    border: none;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.program-card-delete:hover {
+    background-color: rgb(246, 66, 66);
+}
+
+.program-card-body {
+    background-color: #606060;
+    color: #ffffff;
+    border-radius: 0px 0px 10px 10px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.exercise-container {
+    border-bottom: 1px solid black;
+}
+
+.exercise-row {
+    padding: 0 15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+    height: 3rem;
+    align-items: center;
+}
+
+.exercise-container:last-child {
+    border-bottom: none;
+}
+
+.exercise-name {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.exercise-weight,
+.exercise-reps,
+.exercise-sets {
+    color: #fea931;
+    text-align: right;
+}
+
+.exercise-reps {
+    margin-right: 10px;
+}
+
+.exercise-reps:after {
+    content: "-";
+    position: relative;
+    left: 5px;
+}

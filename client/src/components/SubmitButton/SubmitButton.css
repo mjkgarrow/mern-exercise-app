@@ -1,0 +1,22 @@
+.submit-button {
+    height: 40px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 800;
+    color: #111;
+    background-color: #47ff9d;
+    cursor: pointer;
+    margin-right: 10px;
+    position: relative;
+
+}
+
+.submit-button-name {
+    transition: all 0.2s ease-in-out;
+}
+
+.submit-button:hover .submit-button-name {
+    transform: scale(110%);
+}

@@ -1,0 +1,34 @@
+.button-add {
+    display: flex;
+    align-items: center;
+    background-color: #47ff9d;
+    border: none;
+    border-radius: 100%;
+    color: #111;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    justify-content: center;
+    padding: 0px 1px 0px 0px;
+    position: relative;
+}
+
+.add-icon {
+    position: relative;
+    bottom: 3px;
+    left: 1px;
+    font-size: 40px;
+    transition: transform 0.2s ease-in-out;
+    transform-origin: 12px 27px;
+}
+
+.button-add:hover .add-icon {
+    transform: scale(130%);
+    /* transform: rotate(90deg); */
+    transform-origin: 12px 27px;
+}
+
+
+.remove {
+    background-color: rgb(231, 68, 68);
+}

@@ -1,0 +1,119 @@
+.workout-history-card-container {
+    width: fit-content;
+    min-width: 250px;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    font-weight: 800;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 20px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    position: relative;
+}
+
+.workout-history-card-delete {
+    position: absolute;
+    left: 92%;
+    top: 8px;
+    height: 16px;
+    width: 16px;
+    border-radius: 100%;
+    background-color: rgb(228, 116, 116);
+    border: none;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.workout-history-card-delete:hover {
+    background-color: rgb(246, 66, 66);
+}
+
+.workout-history-card-container:hover {
+    background-color: #404040;
+}
+
+.workout-history-card-header {
+    display: flex;
+    flex-direction: row;
+    /* background-color: red; */
+}
+
+.title-descriptors {
+    padding-right: 10px;
+    margin-right: 10px;
+    border-right: 1px solid white;
+    color: #fea931;
+}
+
+.title-descriptors div {
+    text-align: right;
+    padding: 5px 0 5px 0;
+}
+
+.title-data div {
+    text-align: left;
+    padding: 5px 0 5px 0;
+}
+
+.workout-history-card-body {
+    margin-top: 10px;
+}
+
+.workout-history-exercise-title {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+.workout-history-exercise-weight {
+    color: #fea931;
+}
+
+.workout-history-exercise {
+    padding: 10px;
+    border-bottom: 1px solid black;
+}
+
+.workout-history-exercise:last-child {
+    border-bottom: none;
+}
+
+.workout-history-repsSets {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.repsSets {
+    color: black;
+    height: 1.6rem;
+    width: 1.6rem;
+    border-radius: 100%;
+    background-color: rgb(50, 162, 72);
+    position: relative;
+
+}
+
+.repsSetsFalse {
+    color: white;
+    background-color: rgb(231, 68, 68);
+}
+
+.repsSetsDropped {
+    color: #333;
+    background-color: rgb(231, 152, 68);
+}
+
+.repsSetsValue {
+    /* position: absolute;
+    left: 25%;
+    top: 10%; */
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    transform: translateY(.2rem);
+    /* background-color: #404040; */
+}

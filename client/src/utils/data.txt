@@ -1,0 +1,99 @@
+Contexts:
+    Local Storage - handles the persistent local storage:
+        persistentProgramData, setPersistentProgramData
+        persistentWorkoutData, setPersistentWorkoutData
+        persistentWorkoutTime, setPersistentWorkoutTime
+    
+    Program Context - handles the list of workout programs:
+        { programData: programData, programDispatcher: programDispatcher }
+
+    Workout Context - handles the workout based on a single program:
+        { workoutData: workoutData, workoutDispatcher: workoutDispatcher }
+
+
+
+Programs - an array of Program objects:
+    [
+        {
+            _id: Number
+            programUser: Number
+            programName: String
+            programExercises: [
+                {
+                    _id: Number
+                    exerciseName:  String
+                    exerciseProgression: Number
+                    exerciseWeight: Number
+                    exerciseReps: Number
+                    exerciseSets: Number
+                },
+                {
+                    _id: Number
+                    exerciseName:  String
+                    exerciseProgression: Number
+                    exerciseWeight: Number
+                    exerciseReps: Number
+                    exerciseSets: Number
+                }
+            ]
+        }
+    ]
+
+
+Workout - an altered program object with info about the specific workout:
+    {
+        _id: Number
+        workoutUser: Number
+        workoutDate: Date
+        workoutDuration: Number (milliseconds)
+        workoutInfo: {
+            _id: Number
+            programName: String
+            programExercises: [
+                {
+                    _id: Number
+                    exerciseName:  String
+                    exerciseProgression: Number
+                    exerciseWeight: Number
+                    exerciseReps: Number
+                    exerciseSets: Number
+                    completedRepsSets: [
+                        [5,true], [3,true], [3,true], [5,false]      // Represents the individual sets and how many reps were completed
+                    ]
+                },
+                {
+                    _id: Number
+                    exerciseName:  String
+                    exerciseProgression: Number
+                    exerciseWeight: Number
+                    exerciseReps: Number
+                    exerciseSets: Number
+                    completedRepsSets: [
+                        [5,true], [3,true], [3,true], [5,false]      // Represents the individual sets and how many reps were completed
+                    ]
+                }
+            ]
+        }
+    }
+
+
+
+repsSetsData - an object containing the reps and sets for each exercise in a workout:
+    {
+        exerciseId (Number): 
+            [                           // the length is the number of sets
+                [Number, Bool],         // Represents the number of reps and whether it was completed
+                [Number, Bool],
+                [Number, Bool],
+                [Number, Bool],
+            ],
+
+        exerciseId (Number): 
+            [                           // the length is the number of sets
+                [Number, Bool],         // Represents the number of reps and whether it was completed
+                [Number, Bool],
+                [Number, Bool],
+                [Number, Bool],
+            ],
+    }
+
