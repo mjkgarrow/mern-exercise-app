@@ -1,5 +1,7 @@
 # A MERN stack exercise app
 
+Try it out now: https://earnest-medovik-617695.netlify.app/
+
 ### Usage:
 
 Users will need to sign-up first. Just provide an email and password. Password must be min 8 characters and include uppercase, lowercase, a number and a symbol.
@@ -31,3 +33,22 @@ You can review your workout history, including how your sets went for each exerc
 <p align="center">
     <img src="./docs/5-workout-history.png" alt="login" width=80% justify-content=center>
 </p>
+
+
+### Technologies
+
+Back-end:
+- Node
+- Express
+- MongoDB (hosted on Mongo Atlas)
+- Mongoose
+- jsonwebtoken
+- bcryptjs
+- validator
+
+Front-end
+- React
+- create-react-app
+- react-hook-form
+- react-router-dom
+- react-use
