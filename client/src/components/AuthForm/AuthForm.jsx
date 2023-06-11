@@ -65,7 +65,7 @@ export default function Login(props) {
                 <button
                     disabled={isLoading}
                     className="auth-button">
-                    {type}
+                    {isLoading ? 'Sending' : type}
                 </button>
 
                 {type !== "Register" ? <Link className="register-link" to="/register">Register</Link> : <Link className="register-link" to="/login">Login</Link>}
