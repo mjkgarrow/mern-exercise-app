@@ -1,6 +1,6 @@
 # A MERN stack exercise app
 
-Try it out now: https://earnest-medovik-617695.netlify.app/
+Try it out now: https://getfitnow.netlify.app/
 
 ### Usage:
 
